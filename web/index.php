@@ -5,9 +5,6 @@ include_once '../models/Message.php';
 $db = new Database();
 $message = new Message($db);
 $allMessages = $message->readAll();
-
-echo '<pre>'; print_r($allMessages); echo '</pre>'
-
 ?>
 
 <!DOCTYPE html>

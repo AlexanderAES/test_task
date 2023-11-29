@@ -10,12 +10,7 @@ $comment = new Comment($db);
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $messageInfo = $message->getMessageById($id);
-
     $comments = $comment->getAllCommentsByMessageId($id);
-
-    echo '<pre>';
-    print_r($comments);
-    echo '</pre>';
 }
 ?>
 <head>

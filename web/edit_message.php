@@ -8,9 +8,6 @@ $message = new Message($db);
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $messageInfo = $message->getMessageById($id);
-    echo '<pre>';
-    print_r($messageInfo);
-    echo '</pre>';
 }
 
 ?>
