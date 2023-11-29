@@ -3,13 +3,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style/message.css">
+    <link rel="stylesheet" href="../style/messages.css">
 </head>
 <body>
-<div class="register">
-    <div class="register__wrapper">
-        <h2 class="register__title">Введите ваше сообщение</h2>
-        <form class="form-register" id="register" name="register" action="add_message.php"
+<div class="messages">
+    <div class="messages__wrapper">
+        <h2 class="messages__title">Введите ваше сообщение</h2>
+        <form class="form-message" id="register" name="register" action="add_message.php"
               method="POST">
             <input id="title" name="title" placeholder="Введите название" type="text" required>
             <input id="author" name="author" placeholder="Введите имя" type="text" required>

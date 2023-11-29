@@ -18,41 +18,43 @@ if (isset($_GET['id'])) {
     echo '</pre>';
 }
 ?>
-
 <head>
     <title>Просмотр сообщения</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/messages.css">
 </head>
 <body>
-<h1>Просмотр сообщения</h1>
-<div>
-    <a href="send_message.php">
-        <button>Добавить новое сообщение</button>
-    </a>
-</div>
-<div>
-    <div>
-        <h3><?= $messageInfo['title']; ?></h3>
-        <p><?= $messageInfo['author']; ?></p>
-        <p><?= $messageInfo['short_content']; ?></p>
-        <p><?= $messageInfo['full_content']; ?></p>
-    </div>
-    <hr>
-    <div>
-        <?php foreach ($comments as $item): ?>
-
-            <div>
-                <h3><?= $item['author']; ?></h3>
-                <p><?= $item['text']; ?></p>
-
-                <hr>
+    <div class="messages">
+        <div class="messages__block">
+            <h1 class="messages__title">Просмотр сообщения</h1>
+            <a class="messages__add" href="send_message.php">Добавить новое сообщение</a>
+            <div class="messages__wrapper">
+                <div class="message">
+                    <h3 class="message__title"><?= $messageInfo['title']; ?></h3>
+                    <p class="message__subtitle"><?= $messageInfo['author']; ?></p>
+                    <p class="message__text"><?= $messageInfo['short_content']; ?></p>
+                    <p class="message__text"><?= $messageInfo['full_content']; ?></p>
+                </div>
             </div>
-        <?php endforeach; ?>
+            <div>
+                <?php foreach ($comments as $item): ?>
+
+                    <div>
+                        <h3><?= $item['author']; ?></h3>
+                        <p><?= $item['text']; ?></p>
+
+                        <hr>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <div>
+                <a class="messages__add" href="edit_message.php?id=<?= $messageInfo['id']; ?>">Редактировать сообщение</a>
+            </div>
+            <div>
+                <a class="messages__add" href="add_comment.php?id=<?php echo $messageInfo['id']; ?>">Добавить комментарий</a>
+            </div>
+        </div>
     </div>
-    <div>
-        <a href="edit_message.php?id=<?= $messageInfo['id']; ?>">Редактировать сообщение</a>
-    </div>
-    <div>
-        <a href="add_comment.php?id=<?php echo $messageInfo['id']; ?>">Добавить комментарий</a>
-    </div>
-</div>
 </body>

@@ -21,19 +21,19 @@ if (isset($_GET['id'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style/message.css">
+    <link rel="stylesheet" href="../style/messages.css">
 </head>
 <body>
-<div class="register">
-    <div class="register__wrapper">
-        <h2 class="register__title">Редактирование сообщения</h2>
-        <form class="form-register" id="register" name="register" action="edit.php"
+<div class="messages">
+    <div class="messages__wrapper">
+        <h2 class="messages__title">Редактирование сообщения</h2>
+        <form class="form-message" id="message" name="message" action="edit.php"
               method="POST">
-            <input name="id" value="<?php echo $messageInfo['id']; ?>" hidden="hidden">
-            <input name="title" placeholder="Введите название" type="text" value="<?php echo $messageInfo['title']; ?>" required>
-            <input name="author" placeholder="Введите имя" type="text" value="<?php echo $messageInfo['author']; ?>" required>
-            <textarea name="short_content" placeholder="Введите краткое содержание" required><?php echo $messageInfo['short_content']; ?></textarea>
-            <textarea name="full_content" placeholder="Введите полное содержание" required><?php echo $messageInfo['full_content']; ?></textarea>
+            <input name="id" value="<?= $messageInfo['id']; ?>" hidden="hidden">
+            <input name="title" placeholder="Введите название" type="text" value="<?= $messageInfo['title']; ?>" required>
+            <input name="author" placeholder="Введите имя" type="text" value="<?= $messageInfo['author']; ?>" required>
+            <textarea name="short_content" placeholder="Введите краткое содержание" cols="65" rows="6" required><?= $messageInfo['short_content']; ?></textarea>
+            <textarea name="full_content" placeholder="Введите полное содержание" cols="65" rows="6" required><?= $messageInfo['full_content']; ?></textarea>
             <input type="submit" name="edit_message" value="Отправить">
         </form>
     </div>
