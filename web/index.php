@@ -6,7 +6,7 @@ $db = new Database();
 $message = new Message($db);
 $allMessages = $message->readAll();
 
-$perPage = 5;
+$perPage = 3;
 $totalItems = count($allMessages);
 $totalPages = ceil($totalItems / $perPage);
 $currentPage = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] : 1;

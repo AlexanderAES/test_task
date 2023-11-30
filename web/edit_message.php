@@ -31,9 +31,13 @@ if (isset($_GET['id'])) {
             <input name="author" placeholder="Введите имя" type="text" value="<?= $messageInfo['author']; ?>" required>
             <textarea name="short_content" placeholder="Введите краткое содержание" cols="65" rows="6" required><?= $messageInfo['short_content']; ?></textarea>
             <textarea name="full_content" placeholder="Введите полное содержание" cols="65" rows="6" required><?= $messageInfo['full_content']; ?></textarea>
-            <input type="submit" name="edit_message" value="Отправить">
+            <input type="submit" name="edit_message" value="Сохранить">
         </form>
+        <div class="back__button">
+            <a href="view_message.php?id=<?=$_GET['id']?>">Назад</a>
+        </div>
     </div>
+
 </div>
 </body>
 

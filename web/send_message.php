@@ -19,6 +19,9 @@
                       required></textarea>
             <input type="submit" value="Отправить">
         </form>
+        <div class="back__button">
+            <a href="index.php">К списку сообщений</a>
+        </div>
     </div>
 </div>
 </body>

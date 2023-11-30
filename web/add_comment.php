@@ -18,6 +18,9 @@
 
             <input type="submit" name="add_comment" value="Отправить">
         </form>
+        <div class="back__button">
+            <a href="view_message.php?id=<?=$_GET['id']?>">Назад</a>
+        </div>
     </div>
 </div>
 </body>

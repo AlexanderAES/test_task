@@ -50,6 +50,9 @@ if (isset($_GET['id'])) {
             <div>
                 <a class="messages__add" href="add_comment.php?id=<?php echo $messageInfo['id']; ?>">Добавить комментарий</a>
             </div>
+            <div class="back__button">
+                <a href="index.php">К списку сообщений</a>
+            </div>
         </div>
     </div>
 </body>
