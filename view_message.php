@@ -1,7 +1,7 @@
 <?php
-include_once '../models/Database.php';
-include_once '../models/Message.php';
-include_once '../models/Comment.php';
+include_once 'models/Database.php';
+include_once 'models/Message.php';
+include_once 'models/Comment.php';
 
 $db = new Database();
 $message = new Message($db);
@@ -18,7 +18,7 @@ if (isset($_GET['id'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style/messages.css">
+    <link rel="stylesheet" href="libs/css/style.css">
 </head>
 <body>
     <div class="messages">

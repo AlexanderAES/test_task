@@ -1,6 +1,6 @@
 <?php
-include_once '../models/Database.php';
-include_once '../models/Message.php';
+include_once 'models/Database.php';
+include_once 'models/Message.php';
 
 $db = new Database();
 $message = new Message($db);

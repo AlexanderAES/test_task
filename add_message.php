@@ -1,7 +1,7 @@
 <?php
 
-include_once '../models/Database.php';
-include_once '../models/Message.php';
+include_once 'models/Database.php';
+include_once 'models/Message.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $db = new Database();

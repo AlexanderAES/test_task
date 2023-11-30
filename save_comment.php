@@ -1,8 +1,8 @@
 <?php
 
-include_once '../models/Database.php';
-include_once '../models/Message.php';
-include_once '../models/Comment.php';
+include_once 'models/Database.php';
+include_once 'models/Message.php';
+include_once 'models/Comment.php';
 
 
 if (isset($_POST['add_comment'])) {
