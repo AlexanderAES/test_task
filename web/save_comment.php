@@ -16,9 +16,6 @@ if (isset($_POST['add_comment'])) {
     } else {
         echo "Ошибка сохранения комментария.";
     }
-    echo '<pre>';
-    print_r($comment);
-    echo '</pre>';
 }
 
 
